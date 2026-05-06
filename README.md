@@ -1,15 +1,15 @@
 # Debugging Challenge Suite
 
-A curated set of small, realistic debugging tasks for humans or coding agents. Each challenge includes broken code, a reference fix, public tests, and a short explanation of the bug class.
+This repo is a small set of debugging problems.
 
-## Why This Project Exists
+Each challenge has:
 
-Good evaluation work is not only about writing solutions. It is also about designing failures that reveal reasoning quality. This repo demonstrates:
+- `broken.py`, which has a real bug
+- `fixed.py`, which shows one correct solution
+- tests that catch the bug
+- a short README explaining what the code is supposed to do
 
-- compact broken programs with realistic edge cases
-- tests that catch behavioral regressions, not formatting trivia
-- reference fixes for maintainers
-- a runner script that can evaluate either the broken implementation or a candidate fix
+I made this because debugging is a big part of software engineering. It is also useful for code evaluation because a good challenge should test behavior, not just whether code looks nice.
 
 ## Quick Start
 
@@ -54,7 +54,11 @@ python scripts/run_challenge.py challenges/02_json_normalizer --impl fixed.py
 4. Run `CHALLENGE_IMPL=candidate.py pytest challenges/<challenge_name>`.
 5. Compare behavior with `fixed.py` only after attempting the fix.
 
-## What This Shows
+## What I Practiced
 
-This repo is built to signal careful test design, debugging judgment, security awareness, and the ability to create evaluation tasks that are small but meaningful.
-
+- writing tests for edge cases
+- finding bugs by reading behavior carefully
+- making small coding challenges
+- thinking about security bugs like path traversal
+- building a simple runner script
+- organizing code so another person can try the challenges
